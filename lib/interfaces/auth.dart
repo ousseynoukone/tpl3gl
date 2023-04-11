@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'pwd.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key, this.greettings = ""});
@@ -98,7 +99,12 @@ class _AuthScreenState extends State<AuthScreen> {
                         height: 10.0,
                       ),
                       ElevatedButton(
-                        onPressed: () => {print("Click sur le btn")},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Password()),
+                          );
+                        },
                         child: Text(
                           'Suivant'.toUpperCase(),
                         ),
